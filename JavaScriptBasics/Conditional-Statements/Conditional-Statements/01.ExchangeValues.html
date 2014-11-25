@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>1.ExchangeValues</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <label for="tb-first">First number: </label>
+    <input type="text" id="tb-first" />
+    <br />
+    <label for="tb-second">Second number: </label>
+    <input type="text" id="tb-second" />
+    <br />
+    <button onclick="onFindBiggerButtonClick()">Find bigger</button>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        jsConsole.writeLine("1) Write an if statement that examines two integer variables and exchanges their values if the first one is greater than the second one.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+        function onFindBiggerButtonClick() {
+            var first = jsConsole.readFloat("#tb-first");
+            var second = jsConsole.readFloat("#tb-second");
+            var temp;
+
+            if (first > second) {
+                temp = first;
+                first = second;
+                second = temp;
+                jsConsole.writeLine("First one is greater thatn the second, so exchange is applied.")
+                jsConsole.writeLine("First = " + first + " Second = " + second)
+            } else {
+                jsConsole.writeLine("First one is noe greater than the second, so exchange is not needed.")
+            }
+        }
+    </script>			  
+</body>
+
+</html>

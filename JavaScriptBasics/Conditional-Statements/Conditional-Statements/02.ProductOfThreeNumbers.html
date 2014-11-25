@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>2.ProductOfThreeNumbers</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <label for="first-num">Type number 1: </label>
+    <input type="text" id="first-num" />
+    <br/>
+    <label for="second-num">Type number 2: </label>
+    <input type="text" id="second-num" />
+    <br />
+    <label for="third-num">Type number 2: </label>
+    <input type="text" id="third-num" />
+    <br />
+    <button onclick="ProductOfThreeNumbers()">Check</button>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        jsConsole.writeLine("2) Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+        function ProductOfThreeNumbers() {
+            var first = jsConsole.readFloat("#first-num");
+            var second = jsConsole.readFloat("#second-num");
+            var third = jsConsole.readFloat("#third-num");
+            var counter = 0;
+
+            if ((first == 0) || (second == 0) || (third == 0))
+            {
+                jsConsole.writeLine("The result is ZERO = " + (first * second * third));
+            }
+            else {
+                if (first < 0) {
+                    counter++;
+                }
+                if (second < 0) {
+                    counter++;
+                }
+                if (third < 0) {
+                    counter++;
+                }
+
+                if (counter == 1 || counter == 3) 
+                {
+                    jsConsole.writeLine("The result is NEGATIVE = " + (first * second * third));
+
+                }
+                else {
+                    jsConsole.writeLine("The result is POSITIVE = " + (first * second * third));
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

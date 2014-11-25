@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Console - Example</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Insert numbers separated by ',': </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="onMaxEqualSequenceButtonClick()">Sort Array</a>
+        </div>
+    </div>
+    <div id="console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+
+
+		function onMaxEqualSequenceButtonClick() {
+			var FirstArray = jsConsole.readNumbersArray("#tb-first", ',');
+
+			var Maxcount = 0;
+			var count = 0;
+			var positionElement = 0;
+			var i;
+			var j;
+			var minElement;
+			for (i = 0; i < FirstArray.length; i++)
+			{
+				minElement = FirstArray[i];
+				for (j = i; j < FirstArray.length; j++)
+				{
+					if (FirstArray[j] < minElement)
+					{
+						minElement = FirstArray[j];
+						FirstArray[j] = FirstArray[i];
+						FirstArray[i] = minElement;
+					}
+				}
+			}
+
+			jsConsole.write("{");
+			jsConsole.write(FirstArray.join(','));
+			jsConsole.writeLine("}");
+
+
+		}
+    </script>
+</body>
+</html>

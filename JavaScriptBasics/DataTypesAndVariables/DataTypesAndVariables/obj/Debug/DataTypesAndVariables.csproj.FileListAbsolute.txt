@@ -1,0 +1,6 @@
+E:\TelerikAcademy\7.JavaScript - основи\1.Data-Types-and-Variables\DataTypesAndVariables\DataTypesAndVariables\bin\DataTypesAndVariables.dll.config
+E:\TelerikAcademy\7.JavaScript - основи\1.Data-Types-and-Variables\DataTypesAndVariables\DataTypesAndVariables\bin\DataTypesAndVariables.dll
+E:\TelerikAcademy\7.JavaScript - основи\1.Data-Types-and-Variables\DataTypesAndVariables\DataTypesAndVariables\bin\DataTypesAndVariables.pdb
+E:\TelerikAcademy\7.JavaScript - основи\1.Data-Types-and-Variables\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\DataTypesAndVariables.csprojResolveAssemblyReference.cache
+E:\TelerikAcademy\7.JavaScript - основи\1.Data-Types-and-Variables\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\DataTypesAndVariables.dll
+E:\TelerikAcademy\7.JavaScript - основи\1.Data-Types-and-Variables\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\DataTypesAndVariables.pdb

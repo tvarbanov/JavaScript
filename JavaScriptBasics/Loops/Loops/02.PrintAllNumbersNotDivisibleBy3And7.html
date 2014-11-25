@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>2.PrintAllnumbersNotDivisibleBy3And7</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <label for="tb-number">Enter N: </label>
+    <input type="text" id="tb-number" />
+    <button onclick="PrintAllNumbers()">Print</button>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        jsConsole.writeLine("2) Write a script that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+
+        function PrintAllNumbers() {
+            var num = jsConsole.readFloat("#tb-number");
+
+            for (var i = 1; i <= num; i++) {
+                if (i % 3 == 0 || i % 7 == 0) {
+                    continue;
+                }
+
+                jsConsole.writeLine(i);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>8.TrapezoidArea</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <label for="input-a">Type a: </label>
+    <input type="text" id="input-a" /><br />
+    <label for="input-b">Type b: </label>
+    <input type="text" id="input-b" /><br />
+    <label for="input-h">Type h: </label>
+    <input type="text" id="input-h" /><br />
+    <button onclick="TrapezoidArea()">Check</button>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        jsConsole.writeLine("8) Write an expression that calculates trapezoid's area by given sides a and b and height h.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+
+        function TrapezoidArea() {
+            var a = jsConsole.readFloat("#input-a");
+            var b = jsConsole.readFloat("#input-b");
+            var h = jsConsole.readFloat("#input-h");
+            var area = ((a + b) / 2) * h;
+            jsConsole.writeLine("The area of trapezoid with sides - a:" + a + " b:" + b + " and h:" + h + " is " + area);
+        }
+    </script>
+
+</body>
+
+</html>

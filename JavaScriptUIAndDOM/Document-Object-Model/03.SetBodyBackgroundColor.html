@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>03.SetBodyBackgroundColor</title>
+</head>
+<body>
+<input type="color">
+<button onclick="SetBackground()">Set background</button>
+<script>
+    console.log('Crеate a function that gets the value of <input type="color"> and sets the background of the body to this value.');
+
+    function SetBackground() {
+        var inputValue = document.getElementsByTagName('input')[0],
+                body = document.getElementsByTagName('body')[0];
+
+        body.style.backgroundColor = inputValue.value;
+    }
+</script>
+</body>
+</html>

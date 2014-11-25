@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>01.SelectAllDivsInsideDivs</title>
+</head>
+<body>
+<div>First Outer Div
+    <div>Inner Div 1</div>
+    <div>Inner Div 2</div>
+    <div>Inner Div 3</div>
+    <div>Inner Div 4</div>
+    <div>Inner Div 5</div>
+</div>
+<div>Second Outer Div
+    <div>Inner Div 6</div>
+    <div>Inner Div 7</div>
+    <div>Inner Div 8</div>
+    <div>Inner Div 9</div>
+    <div>Inner Div 10</div>
+</div>
+<script>
+
+    function querySelAll() {
+        var queryAll = document.querySelectorAll('div > div');
+
+        for (var i = 0, len = queryAll.length; i < len; i = i + 1) {
+            console.log(queryAll[i].innerHTML);
+        }
+    }
+
+    function getElemByTagName() {
+        var queryAll = document.getElementsByTagName("div");
+
+        for (var i = 0, len = queryAll.length; i < len; i += 1) {
+            if (queryAll[i].parentNode.nodeName == "DIV") {     //check if parent node is div
+                console.log(queryAll[i].innerText);
+            }
+        }
+    }
+    console.log('Write a script that selects all the div nodes that are directly inside other div elements');
+    console.log('Create a function using querySelectorAll()');
+    querySelAll();
+    console.log('------------------------------------------------------------------------------------------');
+    console.log('Create a function using getElementsByTagName()');
+    getElemByTagName();
+</script>
+</body>
+</html>

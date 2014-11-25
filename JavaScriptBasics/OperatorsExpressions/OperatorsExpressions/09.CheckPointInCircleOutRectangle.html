@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>9.CheckPointInCircleOutRectangle</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-width">Type x Coord: </label>
+    <input type="text" id="tb-width" /><br/>
+
+    <label for="tb-height">Type y Coord: </label>
+    <input type="text" id="tb-height" /><br />
+
+    <label for="tb-radius">Type radius: </label>
+    <input type="text" id="tb-radius" /><br />
+
+    <a href="#" onclick="CheckPointInCircleOutRectangle()">Check Point</a>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        jsConsole.writeLine("9) Write an expression that checks for given point (x, y) if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+
+            function CheckPointInCircleOutRectangle() {
+                var x = jsConsole.readFloat("#tb-width");
+                var y = jsConsole.readFloat("#tb-height");
+                var radius = jsConsole.readFloat("#tb-radius");
+
+                if ((Math.pow(x - 1, 2) + Math.pow(y - 1, 2)) <= Math.pow(radius, 2)) {
+                    if (!((x >= -1 && x <= 5) && (y >= -1 && y <= 1))) {
+                        jsConsole.writeLine("This coordinates x = " + x + " and y = " + y + " is inside a circle with radius  "
+                                            + radius + "  and coordinates (1,1) and outside of the rectangle R(top=1, left=-1, width=6, height=2)");
+                    }
+                }
+                else {
+                    jsConsole.writeLine("This coordinates x = " + x + " and y = " + y + " is not inside a circle with radius  "
+                                        + radius + "  and coordinates (1,1) and outside of the rectangle R(top=1, left=-1, width=6, height=2)");
+                }
+            }
+    </script>
+</body>
+</html>

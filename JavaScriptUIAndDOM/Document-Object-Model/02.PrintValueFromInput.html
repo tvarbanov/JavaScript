@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>02.PrintValueFromInput</title>
+</head>
+<body>
+<input type="text">
+<button onclick="GetValue()">Get Value</button>
+<script>
+    console.log('Create a function that gets the value of <input type="text"> ands prints its value to the console.');
+    function GetValue() {
+        var inputValue = document.getElementsByTagName('input')[0];
+
+        console.log(inputValue.value);
+    }
+</script>
+</body>
+</html>

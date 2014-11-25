@@ -1,0 +1,6 @@
+E:\TelerikAcademy\7.JavaScript - основи\2.Operators-Expressions\OperatorsExpressions\OperatorsExpressions\bin\OperatorsExpressions.dll.config
+E:\TelerikAcademy\7.JavaScript - основи\2.Operators-Expressions\OperatorsExpressions\OperatorsExpressions\bin\OperatorsExpressions.dll
+E:\TelerikAcademy\7.JavaScript - основи\2.Operators-Expressions\OperatorsExpressions\OperatorsExpressions\bin\OperatorsExpressions.pdb
+E:\TelerikAcademy\7.JavaScript - основи\2.Operators-Expressions\OperatorsExpressions\OperatorsExpressions\obj\Debug\OperatorsExpressions.csprojResolveAssemblyReference.cache
+E:\TelerikAcademy\7.JavaScript - основи\2.Operators-Expressions\OperatorsExpressions\OperatorsExpressions\obj\Debug\OperatorsExpressions.dll
+E:\TelerikAcademy\7.JavaScript - основи\2.Operators-Expressions\OperatorsExpressions\OperatorsExpressions\obj\Debug\OperatorsExpressions.pdb

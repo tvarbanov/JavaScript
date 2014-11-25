@@ -1,0 +1,6 @@
+E:\TelerikAcademy\7.JavaScript - основи\3.Conditional-Statements\Conditional-Statements\Conditional-Statements\bin\Conditional_Statements.dll.config
+E:\TelerikAcademy\7.JavaScript - основи\3.Conditional-Statements\Conditional-Statements\Conditional-Statements\bin\Conditional_Statements.dll
+E:\TelerikAcademy\7.JavaScript - основи\3.Conditional-Statements\Conditional-Statements\Conditional-Statements\bin\Conditional_Statements.pdb
+E:\TelerikAcademy\7.JavaScript - основи\3.Conditional-Statements\Conditional-Statements\Conditional-Statements\obj\Debug\Conditional_Statements.csprojResolveAssemblyReference.cache
+E:\TelerikAcademy\7.JavaScript - основи\3.Conditional-Statements\Conditional-Statements\Conditional-Statements\obj\Debug\Conditional_Statements.dll
+E:\TelerikAcademy\7.JavaScript - основи\3.Conditional-Statements\Conditional-Statements\Conditional-Statements\obj\Debug\Conditional_Statements.pdb

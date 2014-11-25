@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>3.BiggestOfThreeNumbers</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="numberOne">First number: </label>
+    <input type="text" id="numberOne" />
+    <br/>
+    <label for="numberTwo">Second number: </label>
+    <input type="text" id="numberTwo" />
+    <br />
+    <label for="numberThree">Third number: </label>
+    <input type="text" id="numberThree" />
+    <br />
+    <button onclick="BiggestOfThreeNumbers()">Check</button>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        jsConsole.writeLine("3) Write a script that finds the biggest of three integers using nested if statements.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+            function BiggestOfThreeNumbers() {
+                var firstNum = jsConsole.readFloat("#numberOne");
+                var secondNum = jsConsole.readFloat("#numberTwo");
+                var thirdNum = jsConsole.readFloat("#numberThree");
+                var biggest = 0;
+
+                if ((firstNum == secondNum) && (firstNum == thirdNum)){
+                    jsConsole.writeLine("All numbers are equal");
+                    biggest = firstNum;
+                } else {
+                    if (firstNum > secondNum) {
+                        if (firstNum > thirdNum) {
+                            biggest = firstNum;
+                        } else {
+                            biggest = thirdNum;
+                        }
+                    } else {
+                        if (secondNum > firstNum) {
+                            biggest = secondNum;
+                        } else {
+                            biggest = thirdNum;
+                        }
+                    }
+                }
+                jsConsole.writeLine("Biggest number is : " + biggest);
+            }
+    </script>
+</body>
+</html>

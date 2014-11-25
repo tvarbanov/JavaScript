@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>3.FindMaxAndMinNumber</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <label for="tb-numbers">Enter the numbers with space between them: </label>
+    <input type="text" id="tb-numbers" />
+    <button onclick="AddNumber()">Add</button>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        jsConsole.writeLine("3) Write a script that finds the max and min number from a sequence of numbers.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+
+        function AddNumber() {
+            var num = jsConsole.read("#tb-numbers");
+            num = num.split(' ');
+            var max = num[0];
+            var min = num[0];
+
+            jsConsole.write("Sequence : ");
+
+            for (var i = 0; i < num.length; i++) {
+                jsConsole.write(num[i] + ", ");
+                if (parseInt(num[i]) > max) {
+                    max = parseInt(num[i]);
+                } else if (parseInt(num[i]) < min) {
+                    min = parseInt(num[i]);
+                }
+            }
+
+            jsConsole.writeLine("<br/>Min = " + min);
+            jsConsole.writeLine("Max = " + max);
+
+        }
+    </script>
+</body>
+
+</html>

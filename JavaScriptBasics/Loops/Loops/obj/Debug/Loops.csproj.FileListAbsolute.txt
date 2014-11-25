@@ -1,0 +1,6 @@
+E:\TelerikAcademy\7.JavaScript - основи\4.Loops\Loops\Loops\bin\Loops.dll.config
+E:\TelerikAcademy\7.JavaScript - основи\4.Loops\Loops\Loops\bin\Loops.dll
+E:\TelerikAcademy\7.JavaScript - основи\4.Loops\Loops\Loops\bin\Loops.pdb
+E:\TelerikAcademy\7.JavaScript - основи\4.Loops\Loops\Loops\obj\Debug\Loops.csprojResolveAssemblyReference.cache
+E:\TelerikAcademy\7.JavaScript - основи\4.Loops\Loops\Loops\obj\Debug\Loops.dll
+E:\TelerikAcademy\7.JavaScript - основи\4.Loops\Loops\Loops\obj\Debug\Loops.pdb

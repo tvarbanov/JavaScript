@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #slideshow #slideshowWindow {
+            width:960px;
+            height:420px;
+            margin:0;
+            padding:0;
+            position:relative;
+            overflow:hidden;
+        }
+
+        #slideshow #slideshowWindow .slide {
+            margin:0;
+            padding:0;
+            width:960px;
+            height:420px;
+            float:left;
+            position:relative;
+        }
+
+        #btn-previous{
+            position: absolute;
+            top:430px;
+            left: 435px;
+        }
+
+        #btn-next{
+            position: absolute;
+            top:430px;
+            left: 465px;
+        }
+    </style>
+</head>
+<body>
+<div id="slideshow">
+    <button id="btn-previous"><</button>
+    <div id="slideshowWindow">
+        <div class="slide"><img src="images/image1.jpg" /></div>
+        <div class="slide"><img src="images/image2.jpg" /></div>
+        <div class="slide"><img src="images/image3.jpg" /></div>
+        <div class="slide"><img src="images/image4.jpg" /></div>
+        <div class="slide"><img src="images/image5.jpg" /></div>
+    </div>
+    <button id="btn-next">></button>
+</div>
+<script src="libraries/jquery-2.1.1.min.js" ></script>
+<script src="scripts/01.jQuerySlider.js" ></script>
+</body>
+</html>

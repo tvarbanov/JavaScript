@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>1.Shapes</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+<span>Enter coord X and Y of the first point, separated by ","</span>
+<input id="input-first-point-coords" type="text" />
+<br>
+<span>Enter coord X and Y of the second point, separated by ","</span>
+<input id="input-second-point-coords" type="text" />
+<a href="#" id="calculate-btn" onclick="onCalculateDistanceBtnClicked()">Calculate distance</a>
+<br>
+<br>
+<span>Enter coord X and Y of the start point of the first line, separated by ","</span>
+<input id="input-first-line-start-coords" type="text" />
+<br>
+<span>Enter coord X and Y of the end point of the first line, separated by ","</span>
+<input id="input-first-line-end-coords" type="text" />
+<br>
+<span>Enter coord X and Y of the start point of the second line, separated by ","</span>
+<input id="input-second-line-start-coords" type="text" />
+<br>
+<span>Enter coord X and Y of the end point of the second line, separated by ","</span>
+<input id="input-second-line-end-coords" type="text" />
+<br>
+<span>Enter coord X and Y of the start point of the third line, separated by ","</span>
+<input id="input-third-line-start-coords" type="text" />
+<br>
+<span>Enter coord X and Y of the end point of the third line, separated by ","</span>
+<input id="input-third-line-end-coords" type="text" />
+<a href="#" id="calculate-triangle-btn" onclick="onCalculateTriangleBtnClicked()">Check for triangle</a>
+<div id="js-console"></div>
+<script src="scripts/js-console.js"></script>
+<script>
+    function Point(coordX, coordY){
+        this.coordX = coordX;
+        this.coordY = coordY;
+    }
+
+    function Line(startPoint, endPoint){
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+    }
+
+    function getDistanceBetwееnPoints(firstPoint, secondPoint){
+        var distance;
+        distance = Math.sqrt((firstPoint.coordX - secondPoint.coordX) * (firstPoint.coordX - secondPoint.coordX) +
+                (firstPoint.coordY - secondPoint.coordY) * (firstPoint.coordY - secondPoint.coordY));
+
+        return distance;
+    }
+
+    function onCalculateDistanceBtnClicked(){
+        var firstPointCoords = jsConsole.read('#input-first-point-coords'),
+                secondPointCoords = jsConsole.read('#input-second-point-coords'),
+                firstPoint,
+                secondPoint,
+                distance;
+
+        firstPointCoords = firstPointCoords.split(',');
+        secondPointCoords = secondPointCoords.split(',');
+        firstPoint = new Point(firstPointCoords[0], firstPointCoords[1]);
+        secondPoint = new Point(secondPointCoords[0], secondPointCoords[1]);
+
+        distance = getDistanceBetwееnPoints(firstPoint, secondPoint)
+
+        jsConsole.writeLine('--------------------------------------------------')
+        jsConsole.writeLine('The distance between the two points is ' + distance)
+        jsConsole.writeLine('--------------------------------------------------')
+    }
+
+    function onCalculateTriangleBtnClicked(){
+        var firstStartCoords = jsConsole.read('#input-first-line-start-coords'),
+                firstStartCoords = firstStartCoords.split(','),
+                firstEndCoords = jsConsole.read('#input-first-line-end-coords'),
+                firstEndCoords = firstEndCoords.split(','),
+                secondStartCoords = jsConsole.read('#input-second-line-start-coords'),
+                secondStartCoords = secondStartCoords.split(','),
+                secondEndCoords = jsConsole.read('#input-second-line-end-coords'),
+                secondEndCoords = secondEndCoords.split(','),
+                thirdStartCoords = jsConsole.read('#input-third-line-start-coords'),
+                thirdStartCoords = thirdStartCoords.split(','),
+                thirdEndCoords = jsConsole.read('#input-third-line-end-coords'),
+                thirdEndCoords = thirdEndCoords.split(','),
+                firstLineStartPoint = new Point(firstStartCoords[0], firstStartCoords[1]),
+                firstLineEndPoint = new Point(firstEndCoords[0], firstEndCoords[1]),
+                secondLineStartPoint = new Point(secondStartCoords[0], secondStartCoords[1]),
+                secondLineEndPoint = new Point(secondEndCoords[0], secondEndCoords[1]),
+                thirdLineStartPoint = new Point(thirdStartCoords[0], thirdStartCoords[1]),
+                thirdLineEndPoint = new Point(thirdEndCoords[0], thirdEndCoords[1]),
+                firstLine = new Line(firstLineStartPoint, firstLineEndPoint),
+                secondLine = new Line(secondLineStartPoint, secondLineEndPoint),
+                thirdLine = new Line(thirdLineStartPoint, thirdLineEndPoint);
+
+        function IsPossibleFormingATriangle(firstLine, secondLine, thirdLine) {
+            var a = getDistanceBetwееnPoints(firstLine.startPoint, firstLine.endPoint);
+            var b = getDistanceBetwееnPoints(secondLine.startPoint, secondLine.endPoint);
+            var c = getDistanceBetwееnPoints(thirdLine.startPoint, thirdLine.endPoint);
+            if (a + b > c && a + c > b && b + c > a) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        if (IsPossibleFormingATriangle(firstLine, secondLine, thirdLine)) {
+            jsConsole.writeLine('It IS possible to form triangle from this three lines!')
+            jsConsole.writeLine('--------------------------------------------------')
+        } else {
+            jsConsole.writeLine('It IS NOT possible to form triangle from this three lines!')
+            jsConsole.writeLine('--------------------------------------------------')
+        }
+
+    }
+
+</script>
+</body>
+</html>

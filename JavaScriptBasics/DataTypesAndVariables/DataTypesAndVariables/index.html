@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Data types and variables</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+        jsConsole.writeLine("1) Assign all the possible JavaScript literals to different variables.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+        var integer = 5;
+        jsConsole.writeLine("Integer: " + integer);
+        var float = 5.55;
+        jsConsole.writeLine("Float: " + float);
+        var boolean = false;
+        jsConsole.writeLine("Boolean: " + boolean);
+        var string = "string in JS";
+        jsConsole.writeLine("String: " + string);
+        var obj = { name: "Name", type: "Object" }
+        jsConsole.writeLine("Object: " + obj.name + " Type: " + obj.type);
+        jsConsole.writeLine("</br>2) Create a string variable with quoted text in it. For example: 'How you doin'?', Joey said.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+        var quotedString = '"How you doin?", Joey said.'
+        jsConsole.writeLine(quotedString);
+        jsConsole.writeLine("</br>3) Try typeof on all variables you created.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+        jsConsole.writeLine("Integer: " + typeof(integer));
+        jsConsole.writeLine("Float: " + typeof (float));
+        jsConsole.writeLine("Boolean: " + typeof (boolean));
+        jsConsole.writeLine("String: " + typeof (string));
+        jsConsole.writeLine("Object: " + typeof (obj));
+        jsConsole.writeLine("</br>4) Create null, undefined variables and try typeof on them.");
+        jsConsole.writeLine("----------------------------------------------------------------------");
+        var nullVar = null;
+        var undefined;
+        jsConsole.writeLine("Null: " + typeof (nullVar));
+        jsConsole.writeLine("Undefined: " + typeof (undefined));
+
+	</script>
+</body>
+
+</html>
